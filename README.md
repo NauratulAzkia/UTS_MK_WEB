@@ -179,19 +179,7 @@ npm run build
 php artisan serve
 ```
 
-Buka `http://127.0.0.1:8000`. Untuk Windows PowerShell, jika perintah `cp` tidak tersedia, salin `.env.example` dengan:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Migration membuat tabel aplikasi (`users`, `categories`, `products`, `suppliers`, `purchases`, `purchase_items`, `sales`, dan `sale_items`) serta kolom informasi pengiriman pesanan pelanggan. Seeder mengisi katalog Paw Pantry dan akun demo. Gunakan database lokal khusus untuk aplikasi ini; `php artisan migrate:fresh` akan menghapus seluruh tabel dan data.
-
-Pengujian menggunakan SQLite in-memory dan tidak mengubah database MySQL yang dikonfigurasi untuk aplikasi:
-
-```bash
-php artisan test
-```
+Buka `http://127.0.0.1:8000`.
 
 ### Akun demonstrasi
 
@@ -199,8 +187,6 @@ php artisan test
 | ------------- | -------------------- | ---------- |
 | Admin / Owner | `owner@example.test` | `password` |
 | Staff         | `staff@example.test` | `password` |
-
-Akun ini hanya untuk demo lokal. Gunakan kredensial baru dan kata sandi kuat sebelum aplikasi dipublikasikan.
 
 ## Fitur pelanggan
 
@@ -210,15 +196,8 @@ Akun ini hanya untuk demo lokal. Gunakan kredensial baru dan kata sandi kuat seb
 4. Setelah pesanan dibuat, stok langsung diperbarui dan pesanan tersimpan pada menu **Pesanan saya**.
 5. Buka **Lihat faktur** dari riwayat, kemudian tekan **Cetak faktur** untuk mencetak atau menyimpan sebagai PDF melalui dialog browser.
 
-Pesanan online dicatat sebagai transaksi selesai di sistem, tetapi aplikasi tidak memproses pembayaran atau kurir. Konfirmasi pembayaran dan pengiriman harus dilakukan dengan toko. Pelanggan hanya dapat membuka riwayat dan faktur miliknya sendiri; akses ke dashboard, transaksi, dan pengelolaan internal dibatasi untuk Admin/Staff.
 
-## Katalog dan harga
-
-Seeder menyediakan contoh produk Royal Canin, Pro Plan, Hill's Science Diet, Brit Premium, Me-O Gold, Whiskas, Friskies, dan Sheba. Nama produk serta ukuran kemasan mengacu pada lini produk yang dipasarkan di Indonesia. Harga beli dan harga jual awal adalah **harga acuan untuk demo**, bukan feed harga langsung dari klinik atau supplier; harga, ukuran kemasan, dan ketersediaan dapat berbeda menurut kota, kanal penjualan, promo, serta waktu pembelian.
-
-Jadikan harga master sebagai placeholder yang perlu dicek ulang sebelum dipakai untuk transaksi nyata. Admin dapat mengubah harga jual melalui menu Produk; harga beli diperbarui saat pembelian dicatat. Untuk diet veteriner seperti Royal Canin Veterinary Urinary S/O, ikuti anjuran dokter hewan.
-
-Referensi lini produk:
+Referensi produk:
 
 - [Royal Canin Indonesia](https://www.royalcanin.com/id)
 - [Purina Indonesia](https://www.purina.co.id/)
@@ -251,7 +230,3 @@ php artisan test
 ```
 
 Feature test mencakup autentikasi dan otorisasi, pendaftaran pelanggan, checkout mandiri, validasi stok, privasi faktur, pembelian, penjualan, rollback stok, pembatalan, pencarian/filter katalog, dan laporan.
-#   U T S _ M K _ W E B  
- #   U T S _ M K _ W E B  
- #   U T S _ M K _ W E B  
- 
