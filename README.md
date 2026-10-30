@@ -133,9 +133,9 @@ erDiagram
 Pastikan PHP 8.2+, Composer, MySQL/MariaDB, Node.js, dan npm sudah terpasang.
 
 ```bash
-# 1. Clone repository (ganti URL dengan alamat repository Paw Pantry)
+# 1. Clone repository (ganti URL dengan alamat repository UTS_MK_WEB)
 git clone <repository-url>
-cd Paw-Pantry
+cd UTS_MK_WEB
 
 # 2. Salin konfigurasi environment
 cp .env.example .env
