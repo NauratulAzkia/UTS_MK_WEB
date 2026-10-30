@@ -140,11 +140,11 @@ cd UTS_MK_WEB
 # 2. Salin konfigurasi environment
 cp .env.example .env
 
-# 3. Generate application key
-php artisan key:generate
-
-# 4. Install dependensi PHP
+# 3. Install dependensi PHP
 composer install
+
+# 4. Generate application key
+php artisan key:generate
 ```
 
 ### Konfigurasi database Paw Pantry
