@@ -137,11 +137,11 @@ Pastikan PHP 8.2+, Composer, MySQL/MariaDB, Node.js, dan npm sudah terpasang.
 git clone <repository-url>
 cd UTS_MK_WEB
 
-# 2. Salin konfigurasi environment
-cp .env.example .env
-
-# 3. Install dependensi PHP
+# 2. Install dependensi PHP
 composer install
+
+# 3. Salin konfigurasi environment
+cp .env.example .env
 
 # 4. Generate application key
 php artisan key:generate
